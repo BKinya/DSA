@@ -1,5 +1,7 @@
 package nonKotlin;
 
+import stack.ValidParenthesis;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +13,11 @@ public class Main {
         int[] numbers = {21, 37, 44, 47, 59, 61, 73, 77, 81, 85, 87, 89, 93};
         BinarySearch binarySearch = new BinarySearch(numbers);
 
-        boolean result = binarySearch.search(79);
-        System.out.println("result is " + result);
+//        boolean result = binarySearch.search(79);
+//        System.out.println("result is " + result);
+
+        ValidParenthesis vp = new ValidParenthesis("([]){");
+        boolean result = vp.isValidString();
+        System.out.println("result => " +result);
     }
 }
