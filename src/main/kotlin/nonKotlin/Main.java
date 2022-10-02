@@ -1,23 +1,23 @@
 package nonKotlin;
 
-import stack.ValidParenthesis;
-
-import java.util.Scanner;
+import stack.LinkedListImpl;
 
 public class Main {
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        String[] ops = {"5"};
+        LinkedListImpl stack = new LinkedListImpl();
+        stack.push(4);
+        stack.push(11);
+        stack.push(78);
+        stack.push(9);
 
-//       System.out.println(Solution.calPoints(ops));
-        int[] numbers = {21, 37, 44, 47, 59, 61, 73, 77, 81, 85, 87, 89, 93};
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        stack.display();
 
-//        boolean result = binarySearch.search(79);
-//        System.out.println("result is " + result);
+        stack.pop();
+        stack.pop();
 
-        ValidParenthesis vp = new ValidParenthesis("([]){");
-        boolean result = vp.isValidString();
-        System.out.println("result => " +result);
+        System.out.println("Stack empty " +stack.isEmpty());
+        System.out.println("Stack peek " +stack.peek());
+
+        stack.display();
     }
 }

@@ -58,8 +58,6 @@ public class ValidParenthesis {
                         }else {
                             break;
                         }
-
-
                 }
 
             }
